@@ -1,0 +1,89 @@
+/* Prevent scroll from body */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* disables scroll */
+  height: 100%;
+}
+
+/* Container covers full screen with no scroll */
+.home-container {
+  position: relative;
+  height: 100vh;  /* changed from min-height */
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+/* Put Aurora in background */
+.aurora-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So it doesn't block clicks */
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.highlight {
+  color: #6C63FF;
+}
+
+.app-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.input-field {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.submit-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #6C63FF;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #574fd3;
+}
