@@ -1,0 +1,22 @@
+.video-room-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfdfd; /* Modern off-white */
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.video-call-box {
+  width: 100%;
+  max-width: 1200px;
+  height: 85vh;
+  border-radius: 16px;
+  overflow: hidden;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+}
