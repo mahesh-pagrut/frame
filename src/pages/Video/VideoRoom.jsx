@@ -22,7 +22,7 @@ const VideoRoom = () => {
       sharedLinks: [
         {
           name: 'copy link',
-          url: `http://localhost:5273/room/${roomID}`,
+          url: `${window.location.origin}/room/${roomID}`,
         },
       ],
       scenario: {
