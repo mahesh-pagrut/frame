@@ -7,44 +7,49 @@ const Home = () => {
     let navigate = useNavigate()
     const [input, setInput] = useState("")
 
-    function handleJoin(){
-        navigate(`/room/${input}`)
+    function handleJoin() {
+        if (!input.trim()) {
+            alert("Please enter a valid Room ID");
+            return;
+        }
+        navigate(`/room/${input}`);
     }
 
-  return (
-    <div className="home-container">
-        <div className="aurora-wrapper">
-        <AuroraBackground />
-      </div>
 
-      <header className="header">
-        <img 
-          src="https://cdn-icons-png.flaticon.com/512/724/724715.png" 
-          alt="Camera Logo" 
-          className="logo"
-        />
-        <h1 className="app-title">
-          Welcome to <span className="highlight">Frame</span>
-        </h1>
-        <p className="app-subtitle">
-          Effortless video calls and chat, just one click away.
-        </p>
-      </header>
+    return (
+        <div className="home-container">
+            <div className="aurora-wrapper">
+                <AuroraBackground />
+            </div>
 
-      <div className="form-container">
-        <input 
-          type="text" 
-          placeholder="Enter your roomID" 
-          className="input-field" 
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button className="submit-button"
-        onClick={handleJoin}
-        >Join Now</button>
-      </div>
-    </div>
-  );
+            <header className="header">
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/724/724715.png"
+                    alt="Camera Logo"
+                    className="logo"
+                />
+                <h1 className="app-title">
+                    Welcome to <span className="highlight">Frame</span>
+                </h1>
+                <p className="app-subtitle">
+                    Effortless video calls and chat, just one click away.
+                </p>
+            </header>
+
+            <div className="form-container">
+                <input
+                    type="text"
+                    placeholder="Enter your roomID"
+                    className="input-field"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                />
+                <button className="submit-button"
+                    onClick={handleJoin}
+                >Join Now</button>
+            </div>
+        </div>
+    );
 };
 
 export default Home;
