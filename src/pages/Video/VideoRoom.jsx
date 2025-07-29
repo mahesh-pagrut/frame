@@ -39,7 +39,7 @@ const VideoRoom = () => {
   return (
     <div className="video-room-container">
       <button className="back-btn" onClick={handleBack}>
-        ← Back to Home
+        End Session
       </button>
       <div className="video-call-box" ref={myMeeting} />
     </div>

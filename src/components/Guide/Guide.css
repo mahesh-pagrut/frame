@@ -104,3 +104,49 @@
     padding: 5px 10px;
   }
 }
+
+
+/* Existing styles... */
+
+.contact-title {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* icon wrapper */
+.guide-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* base icon style */
+.guide-links a {
+  font-size: 1.5rem;
+  opacity: 0.4;
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+/* hover effects with color-specific transitions */
+.guide-links .portfolio-link:hover {
+  color: #a259ff; /* purple */
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.guide-links .linkedin-link:hover {
+  color: #0A66C2; /* LinkedIn blue */
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.guide-links .instagram-link:hover {
+  color: #e4405f; /* red/pink Instagram shade */
+  opacity: 1;
+  transform: scale(1.2);
+}

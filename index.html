@@ -5,29 +5,34 @@
     <link rel="icon" type="image/png" href="/frame.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frame-VidChat</title>
+    <style>
+      .name-badge {
+        position: fixed;
+        top: 1.8rem;
+        right: 3.5rem;
+        background: rgba(0, 0, 0, 0.05);
+        color: rgba(105, 101, 219, 0.2);
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-family: 'Segoe UI', sans-serif;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        z-index: 9999;
+        transition: all 0.3s ease;
+      }
+
+      .name-badge:hover {
+        color: #6965DB;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <a href="https://portfolio-wg4w.vercel.app/" target="_blank" style="
-  position: fixed;
-  bottom: 16px;
-  left: 12px;
-  background: rgba(0, 0, 0, 0.05);
-  color: rgba(105, 101, 219, 0.632); /* 20% opacity */
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  z-index: 9999;
-  text-decoration: none;
-  transition: all 0.3s ease;
-"
-onmouseover="this.style.color='#6965DB'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'"
-onmouseout="this.style.color='rgba(105,101,219,0.2)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
-  Made by Mahesh Pagrut
-</a>
 
+    <div class="name-badge">
+      Made by Mahesh Pagrut
+    </div>
   </body>
 </html>

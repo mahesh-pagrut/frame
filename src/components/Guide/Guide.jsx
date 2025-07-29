@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Guide.css';
+import { FaLinkedin, FaInstagram, FaGlobe } from 'react-icons/fa';
 
 const GuideModal = () => {
   const [showModal, setShowModal] = useState(false);
   const modalRef = useRef();
   const buttonRef = useRef();
 
-  // Close modal on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -43,6 +43,39 @@ const GuideModal = () => {
               <li>3️⃣ They can join the room using the same link.</li>
               <li>4️⃣ Start your video chat session!</li>
             </ul>
+
+            {/* Contact Developer */}
+            <p className="contact-title">📬 Contact Developer</p>
+            <div className="guide-links">
+              <a
+                href="https://portfolio-wg4w.vercel.app/"
+                className="portfolio-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Portfolio"
+              >
+                <FaGlobe />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/maheshpagrut"
+                className="linkedin-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://www.instagram.com/your_instagram_username"
+                className="instagram-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+            </div>
+
             <button className="close-btn" onClick={() => setShowModal(false)}>Close</button>
           </div>
         </div>
