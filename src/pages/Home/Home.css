@@ -1,50 +1,64 @@
-/* Prevent scroll from body */
+/* Global styles */
 body, html {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* disables scroll */
   height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
 }
 
-/* Container covers full screen with no scroll */
+/* Main container */
 .home-container {
   position: relative;
-  height: 100vh;  /* changed from min-height */
+  height: 100vh;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
+  justify-content: flex-start; /* push items towards bottom */
+  padding: 2rem;
+  padding-top: 8rem; /* adds eye-level space */
 }
-
-/* Put Aurora in background */
+/* Background effect */
 .aurora-wrapper {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* So it doesn't block clicks */
+  pointer-events: none;
 }
 
+/* Header block */
 .header {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeIn 0.8s ease-out both;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
+/* Logo styling */
 .logo {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 1rem;
+  width: 100px;
+  height: auto;
+  border-radius: 16px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); */
+  transition: transform 0.3s ease;
 }
 
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Title */
 .app-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: #1a1a1a;
   margin: 0;
 }
 
@@ -52,38 +66,86 @@ body, html {
   color: #6C63FF;
 }
 
+/* Subtitle */
 .app-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   color: #666;
-  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
+/* Form section */
 .form-container {
   position: relative;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .input-field {
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1.1rem;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #ccc;
+  width: min(320px, 85vw);
   outline: none;
+  transition: border 0.2s ease;
 }
 
+.input-field:focus {
+  border-color: #6C63FF;
+}
+
+/* Button styling */
 .submit-button {
-  padding: 0.8rem 1.5rem;
+  padding: 0.9rem 1.6rem;
   font-size: 1rem;
+  font-weight: 500;
   border: none;
   background-color: #6C63FF;
   color: white;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit-button:hover {
   background-color: #574fd3;
+  transform: translateY(-2px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .form-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
 }
