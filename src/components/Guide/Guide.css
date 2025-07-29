@@ -11,11 +11,11 @@
   transition: all 0.3s ease;
 }
 
-/* Hamburger & Close icon */
+/* Icon styling */
 .hamburger-icon {
   font-size: 1.8rem;
-  color: #333;
-  opacity: 0.5;
+  color: #6C63FF;
+  opacity: 0.7;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -45,16 +45,13 @@
   box-sizing: border-box;
 }
 
-/* Glassmorphism */
+/* Glassmorphism effect */
 .glass {
-  background:
-    linear-gradient(135deg, rgba(139, 129, 247, 0.434), rgba(251, 251, 194, 0.3), rgba(128, 219, 249, 0.3)), /* lavender, yellow, light blue */
-    rgba(255, 255, 255, 0.2); 
+  background: linear-gradient(135deg, rgba(139, 129, 247, 0.4), rgba(251, 251, 194, 0.3), rgba(128, 219, 249, 0.3));
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 
 /* Modal entry animation */
 @keyframes fadeUp {
@@ -68,7 +65,7 @@
   }
 }
 
-/* Close button inside modal */
+/* Close button */
 .close-btn {
   background: #f9aaaa;
   color: #fff;
@@ -79,8 +76,8 @@
   cursor: pointer;
   font-size: 0.9rem;
 }
-.close-btn:hover{
-    background: #ff6969;
+.close-btn:hover {
+  background: #ff6969;
 }
 
 /* Fade in button animation */
