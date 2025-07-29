@@ -14,7 +14,7 @@ const VideoRoom = () => {
       serverSecret,
       roomID,
       Date.now().toString(),
-      'mahesh pagrut'
+      'enter your name'
     );
 
     const zp = ZegoUIKitPrebuilt.create(kitToken);
@@ -33,7 +33,7 @@ const VideoRoom = () => {
   };
 
   const handleBack = () => {
-    window.location.href = '/'; // force refresh and navigate to home
+    window.location.href = '/'; 
   };
 
   return (
