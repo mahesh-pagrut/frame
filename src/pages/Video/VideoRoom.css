@@ -4,9 +4,11 @@
   align-items: center;
   background-color: #fdfdfd; /* Modern off-white */
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1.5rem;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
+  flex-direction: column;
 }
 
 .video-call-box {
@@ -15,8 +17,56 @@
   height: 85vh;
   border-radius: 16px;
   overflow: hidden;
-  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
   background-color: #fff;
   z-index: 1;
   position: relative;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+}
+
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: rgb(54, 53, 53);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #554fd0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .video-call-box {
+    height: 75vh;
+    border-radius: 12px;
+  }
+
+  .back-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-call-box {
+    height: 70vh;
+    border-radius: 10px;
+  }
+
+  .back-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+    top: 10px;
+    left: 10px;
+  }
 }
