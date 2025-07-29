@@ -1,0 +1,58 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #fdfdfd;
+  opacity: 0.7;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+  color: #6965DB;
+}
+
+.footer-text,
+.footer-year {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.footer-text:hover,
+.footer-year:hover {
+  transform: scale(1.05);
+  color: #6965DB;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer-text,
+  .footer-year {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    gap: 1rem;
+  }
+}

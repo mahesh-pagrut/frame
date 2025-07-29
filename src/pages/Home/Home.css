@@ -19,7 +19,9 @@ body, html {
   justify-content: flex-start; /* push items towards bottom */
   padding: 2rem;
   padding-top: 8rem; /* adds eye-level space */
+  position: relative;
 }
+
 /* Background effect */
 .aurora-wrapper {
   position: absolute;

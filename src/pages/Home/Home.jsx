@@ -51,6 +51,7 @@ const Home = () => {
                     Join Now
                 </button>
             </div>
+            
         </div>
     );
 };
