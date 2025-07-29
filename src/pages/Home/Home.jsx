@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Home.css';
 import AuroraBackground from '../../components/AuroraBackground';
 import { useNavigate } from 'react-router-dom';
+import frameImg from '../../assets/frame.png';
+
 
 const Home = () => {
     let navigate = useNavigate()
@@ -24,7 +26,7 @@ const Home = () => {
 
             <header className="header">
                 <img
-                    src="https://cdn-icons-png.flaticon.com/512/724/724715.png"
+                    src={frameImg}
                     alt="Camera Logo"
                     className="logo"
                 />
