@@ -106,17 +106,30 @@ body, html {
   font-size: 1rem;
   font-weight: 500;
   border: none;
-  background-color: #6C63FF;
+  background: linear-gradient(
+    135deg,
+    #6C63FF,
+    #6C63FF
+
+  );
   color: white;
   border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.4s ease, transform 0.2s ease, color 0.3s ease;
 }
 
+/* Subtle gradient on hover */
 .submit-button:hover {
-  background-color: #574fd3;
+  background: linear-gradient(
+    135deg,
+    #6057ff,
+    rgba(94, 86, 254, 0.9),
+    rgba(107, 99, 255, 0.771)
+  );
   transform: translateY(-2px);
 }
+
+
 
 /* Fade-in animation */
 @keyframes fadeIn {

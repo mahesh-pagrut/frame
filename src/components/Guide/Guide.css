@@ -1,0 +1,109 @@
+/* Button styling */
+.guide-toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  animation: fadeIn 1.2s ease;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger & Close icon */
+.hamburger-icon {
+  font-size: 1.8rem;
+  color: #333;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.guide-toggle-button:hover .hamburger-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Modal container positioned top-right */
+.guide-modal-wrapper {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  z-index: 999;
+  animation: fadeUp 0.4s ease;
+}
+
+/* Modal box */
+.guide-modal-content {
+  padding: 16px;
+  border-radius: 16px;
+  max-width: 300px;
+  width: 90vw;
+  color: #333;
+  font-size: 0.95rem;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Glassmorphism */
+.glass {
+  background:
+    linear-gradient(135deg, rgba(139, 129, 247, 0.434), rgba(251, 251, 194, 0.3), rgba(128, 219, 249, 0.3)), /* lavender, yellow, light blue */
+    rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* Modal entry animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button inside modal */
+.close-btn {
+  background: #f9aaaa;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.close-btn:hover{
+    background: #ff6969;
+}
+
+/* Fade in button animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+  .guide-modal-wrapper {
+    top: 60px;
+    right: 10px;
+  }
+
+  .guide-modal-content {
+    padding: 12px;
+    font-size: 0.9rem;
+    max-width: 90vw;
+  }
+
+  .close-btn {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}

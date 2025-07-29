@@ -1,60 +1,41 @@
 .sidebar-container {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 20px;
   z-index: 1000;
 }
 
 .hamburger {
-  font-size: 26px;
+  background-color: #6965DB;
+  padding: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  padding: 14px 18px;
-  background-color: rgba(0, 0, 0, 0.04);
-  color: #6965DB;
-  transition: background 0.3s;
+  transition: opacity 0.3s ease;
+  opacity: 0.3;
 }
 
 .hamburger:hover {
-  background-color: rgba(105, 101, 219, 0.12);
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -240px;
-  width: 220px;
-  height: 100vh;
-  background-color: #ffffff;
-  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
-  padding-top: 60px;
-  transition: left 0.3s ease;
-}
-
-.sidebar.open {
-  left: 0;
-}
-
-.sidebar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar ul li {
-  border-bottom: 1px solid #eee;
-}
-
-.sidebar ul li a {
-  display: block;
-  padding: 14px 20px;
-  text-decoration: none;
-  color: #6965DB;
-  font-weight: 500;
-  opacity: 0.6;
-  transition: opacity 0.3s ease, color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
   opacity: 1;
-  color: #4f48d3;
+}
+
+.sidebar-nav {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f5f5f5;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #6965DB;
 }

@@ -1,28 +1,27 @@
+// src/components/Sidebar.jsx
 import React, { useState } from 'react';
 import './Sidebar.css';
+import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(prev => !prev);
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="sidebar-container">
-      <div className="hamburger" onClick={toggleSidebar}>
-        ☰
+    <div className={`sidebar-container ${open ? 'open' : ''}`}>
+      <div className="hamburger" onClick={() => setOpen(!open)}>
+        <FaBars size={24} color="#fff" />
       </div>
 
-      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <ul>
-          <li><a href="#home">🏠 Home</a></li>
-          <li><a href="#about">ℹ️ About</a></li>
-          <li><a href="#contact">📞 Contact</a></li>
-          <li><a href="#guide">📘 Guide</a></li>
-          <li><a href="#application">🧠 Application</a></li>
-        </ul>
-      </div>
+      {open && (
+        <nav className="sidebar-nav">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+          <Link to="/guide" className="nav-link">Guide</Link>
+          <Link to="/app-info" className="nav-link">App Info</Link>
+        </nav>
+      )}
     </div>
   );
 };
