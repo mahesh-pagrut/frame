@@ -8,11 +8,11 @@ Built using **React.js, CSS, and Zegocloud SDK,** this web app ensures a smooth 
 **This project emphasizes modular code, secure key handling, and a responsive UI for seamless interaction.**
 
 **📌 Use Cases :**
-**Team Meetings -
-Remote Interviews -
-Online Classes -
-Study Groups -
-Virtual Hangouts -**
+**1️⃣Team Meetings -
+2️⃣Remote Interviews -
+3️⃣Online Classes -
+4️⃣Study Groups -
+5️⃣Virtual Hangouts -**
 
 ## 🚀 Deployed App  
 **Live Demo:** [Frame](https://frame-vidchat.vercel.app/)  
@@ -60,8 +60,8 @@ Ensure you have the following installed:
 
 #### 1️⃣ **Clone the repository**  
 ```sh
-https://github.com/mahesh-pagrut/neo-ai.git
-cd neo-ai
+https://github.com/mahesh-pagrut/frame.git
+cd frame
 ```
 
 #### 2️⃣ Install dependencies
@@ -74,10 +74,4 @@ npm install
 npm run dev
 ```
 
-**Neo AI will now be running at**  (http://localhost:3000/) 🎉
-
-### 📸 Using Neo AI 
-
-- 1️⃣ Ask Anything – Get instant answers with AI-powered responses.
-- 2️⃣ Voice Commands – Talk to Neo and interact naturally.
-- 3️⃣ Fun & Engaging – Experience witty and interactive conversations.
+**FRAME will now be running at**  (http://localhost:3000/) 🎉
