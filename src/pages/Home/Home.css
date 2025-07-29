@@ -129,6 +129,24 @@ body, html {
   transform: translateY(-2px);
 }
 
+/* Position wrapper for Guide button */
+.guide-position-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* On small screens, center at top */
+@media (max-width: 500px) {
+  .guide-position-wrapper {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
+
 
 
 /* Fade-in animation */

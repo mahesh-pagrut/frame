@@ -4,11 +4,17 @@ import './Guide.css';
 const GuideModal = () => {
   const [showModal, setShowModal] = useState(false);
   const modalRef = useRef();
+  const buttonRef = useRef();
 
   // Close modal on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
         setShowModal(false);
       }
     };
@@ -19,6 +25,7 @@ const GuideModal = () => {
   return (
     <>
       <button
+        ref={buttonRef}
         className="guide-toggle-button"
         onClick={() => setShowModal((prev) => !prev)}
         aria-label="Toggle Guide"
